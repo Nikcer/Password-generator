@@ -6,6 +6,7 @@ print("The number of characters in the password must be between 8 and 15.")
 
 
 while True:
+
     len_pswd = int(input("Choose password length: "))
 
     if len_pswd >= 8 and len_pswd <= 15:
@@ -16,6 +17,7 @@ while True:
     else:
         print("The number of characters does not meet the requirements! Enter again.")
         continue
+    
 
 
 addChr = input(("Add symbols to your password? y/n: "))

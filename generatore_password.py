@@ -1,29 +1,41 @@
 import random
 import string
 
-print("Benvenuto nel generatore di password casuali!")
-print("Il numero di caratteri della password deve essere compreso tra 8 e 15.")
+print("Welcome to the Random Password Generator!")
+print("The number of characters in the password must be between 8 and 15.")
+
 
 while True:
-    len_pswd = int(input("Scegli la lunghezza della password: "))
+    len_pswd = int(input("Choose password length: "))
 
     if len_pswd >= 8 and len_pswd <= 15:
-        print("")
+        print(f"The password length is {len_pswd} characters")
 
         break
 
     else:
-        print("Il numero dei caratteri non soddisfa le richieste! Inserisci nuovamente.")
+        print("The number of characters does not meet the requirements! Enter again.")
         continue
 
-caratteri = string.ascii_letters
-numeri = string.digits
-simboli = string.punctuation
+
+
+
+addChr = input(("Add symbols to your password? y/n: "))
+if  addChr.lower() == "y":
+    symbols = string.punctuation
+else: 
+    symbols = ""
+    print("The password does not contain symbols")
+    
+
+characters = string.ascii_letters
+numbers = string.digits
+
 password = ""
 for i in range(0, len_pswd):
-    password += random.choice(caratteri + numeri + simboli)
-print("La password è:", password)
-print("Grazie per aver scelto il nostro servizio")
+    password += random.choice(characters + numbers + symbols)
+print("The password is:", password)
+print("Thank you!")
         
 
     

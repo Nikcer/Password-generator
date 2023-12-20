@@ -18,15 +18,13 @@ while True:
         continue
 
 
-
-
 addChr = input(("Add symbols to your password? y/n: "))
-if  addChr.lower() == "y":
+if addChr.lower() == "y":
     symbols = string.punctuation
-else: 
+else:
     symbols = ""
     print("The password does not contain symbols")
-    
+
 
 characters = string.ascii_letters
 numbers = string.digits
@@ -36,7 +34,3 @@ for i in range(0, len_pswd):
     password += random.choice(characters + numbers + symbols)
 print("The password is:", password)
 print("Thank you!")
-        
-
-    
-
